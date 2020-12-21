@@ -1,0 +1,46 @@
+
+/* formulario */
+.bordebox {
+    border: 1px solid ; color: navy;
+}
+/* formulario */
+
+.lavadoh1{
+    color: papayawhip;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 60px;
+}
+
+.parrafo{
+font-size: 25px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+line-height: 60px;
+}
+
+
+
+/* image */
+
+body, html {
+    height: 100%;
+}
+
+.portada-image {  
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../image/lavado-a-presion.jpg");
+  height: 50%;  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.portada-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+

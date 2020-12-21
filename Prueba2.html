@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Registro de usario</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="css/style.css"> 
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      
+         
+
+      
+   </head>
+
+
+    <body>
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <a class="navbar-brand" href="#">
+         <img src="image/car.png" width="80" height="50" alt="" loading="lazy">
+         </a>
+         <a class="navbar-brand" >Los Cliners</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav mr-auto">
+         <li class="nav-item active">
+            <a class="nav-link" href="Portada.html">Home <span class="sr-only">(current)</span></a>
+         </li>
+         <ul>
+      </nav>
+
+      <div class="container-fluid" id="frmFormulario">
+         <div class="row"> <br></div>
+         <div class="row">
+         <div class="col-0 col-sm-1 col-md-2"></div>
+         <div class="col-12 col-sm-10 col-md-8 bordebox">
+            <div class="row justify-content-center mt-sm-5">
+               <h1>Registro del Cliente</h1>
+            </div>
+            <form>
+               <div class="form-row">
+                  <div class="form-group col-md-6">
+                     <label for="inputName">Nombre</label>
+                     <input type="text" onkeypress="return sololetras(event)" maxlength="50" class="form-control form-control-sm" id="inputName">
+                  </div>
+                  <div class="form-group col-md-6">
+                     <label for="inputlastName">Apellido</label>
+                     <input type="text"  onkeypress="return sololetras(event)" maxlength="50" class="form-control form-control-sm" id="inputlastName">
+                  </div>
+               </div>
+               <div class="form-row">
+                  <div class="form-group col-md-6">
+                     <label for="inputRut">Rut</label>
+                     <div class="row">
+                        <div class="col-9">  
+                           <input type="number" onkeypress=" return soloNumeros(event)" id="rutnumber" class="form-control form-control-sm" id="inputRut">     
+                        </div>
+                        <div class="col-3">
+                           <input type="text" class="form-control form-control-sm w-50" id="inputRutDV" onkeypress="return verificador(event)" maxlength="1">  
+                        </div>
+                     </div>
+                  </div>
+                  <div class="form-group col-md-6">
+                     <label for="inputdate">Fecha de Nacimiento</label>
+                     <input type="date" class="form-control form-control-sm" max="2020-12-31" id="inputnacimiento" >
+                  </div>
+               </div>
+               <div class="form-row">
+                  <div class="form-group col-md-6">
+                     <label for="inputAddress">Dirección</label>
+                     <input type="text" onkeypress="return direccion(event)" maxlength="100" class="form-control form-control-sm" id="inputAddress" placeholder="Calle/Numero/Dept/Psj">
+                  </div>
+                  <div class="form-group  col-md-4">
+                     <label for="inputAddress2">Comuna</label>
+                     <input type="text"  class="form-control form-control-sm " id="inputAddress2" >
+                  </div>
+               </div>
+               <div class="row justify-content-center mt-sm-5">
+                  <h5>Datos del vehículo </h5>
+               </div>
+               <div class="row">
+                  <legend class="col-form-label col-sm-2 pt-0">Tipo de Vehículo </legend>
+                  <div class="col-sm-10">
+                     <div class="form-check ">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" id="inputcheck">
+                        <label class="form-check-label" for="gridRadios1">Furgón</label>
+                     </div>
+                     <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                        <label class="form-check-label" for="gridRadios2">Automóvil</label>
+                     </div>
+                     <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" >
+                        <label class="form-check-label" for="gridRadios3">Camión</label>
+                     </div>
+                     <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option4" >
+                        <label class="form-check-label" for="gridRadios4">Camioneta</label>
+                     </div>
+                     <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option5" >
+                        <label class="form-check-label" for="gridRadios5">Moto</label>
+                     </div>
+                  </div>
+               </div>
+               <div class="form-row">
+                  <div class="form-group col-md-4">
+                     <br>
+                     <div class="custom-control custom-checkbox ">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">Revisión Técnica al dia</label>
+                     </div>
+                  </div>
+               </div>
+               <div class="form-row">
+                  <div class="form-group col-md-4">
+                     <label for="inputMarca">Marca</label>
+                     <input type="text" onkeypress="return sololetras(event)" maxlength="20" class="form-control form-control-sm " id="inputMarca">
+                  </div>
+                  <div class="form-group col-md-4">
+                     <label for="inputModelo">Modelo</label>
+                     <input type="text"  onkeypress="return sololetras(event)" maxlength="20" class="form-control form-control-sm" id="inputModelo">
+                  </div>
+                  <div class="form-group col-md-4">
+                     <label for="inputnumber">Año</label>
+                     <input type="number" onkeypress=" return soloNumeros(event)" id="fechanumber" class="form-control form-control-sm" >
+                  </div>
+               </div>
+               <div class="row justify-content-center mt-sm-5">
+                  <h5>Solicitar Servicio </h5>
+               </div>
+               <div class="form-row">
+                  <div class="form-group col-md-6" >
+                     <label for="exampleFormControlSelect1">Encargado</label>
+                     <select class="form-control form-control-sm"  id="encargado" >
+                        <option value="1">-- Seleccionar --</option>
+                        <option value="2">Patricio Cordero</option>
+                        <option value="3">Alejandro Perez</option>
+                        <option value="4">Daniel Gomez</option>
+                        <option value="5">Gerardo Gomez</option>
+                        <option value="6">Matia Arias</option>
+                     </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                     <label>Fecha y Hora</label>
+                     <div  class="form-row">
+                        <div class="form-group col-md-6" >
+                           <input type="date"  class="form-control form-control-sm" max="2020-12-31" id="inputfecha" >
+                        </div>
+                        <div class="form-group col-md-6 ">
+                           <input type="time" class="form-control form-control-sm" min="09:00" max="19:00" step="3600" id="inputhora">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="form-row">
+                  <div class="form-group col-md-4">
+                     <div class="form-check ">
+                        <input class="form-check-input " type="checkbox"  id="basic_single" name="basic_single" value="5000">
+                        <label class="form-check-label" for="gridCheck1">Lavado exterior <strong>$5.000</strong> (Valor NETO)</label>
+                     </div>
+                  </div>
+                  <div class="form-group col-md-4">
+                     <div class="form-check ">
+                        <input class="form-check-input "  type="checkbox" id="basic_double" name="basic_double" value="8000"  >
+                        <label class="form-check-label " for="gridCheck2" >Lavado Motor <strong>$8.000</strong> (Valor NETO)</label>
+                     </div>
+                  </div>
+                  <div class="form-group col-md-4">
+                     <div class="form-check ">
+                        <input  type="text" class="form-control form-control-sm w-50" id="total" value="0" style="display: none;">
+                        <input  type="text" class="form-control form-control-sm w-50" id="totalIva" value="0" disabled>
+                        <button type="button" class="btn btn-outline-primary btn-sm mt-2" onclick="CalcularIva()" >Total con Iva</button>
+                     </div>
+                  </div>
+               </div>              
+               <div class="row">
+                  <div class="form-group col-sm-12"> <br> </div>
+                  <div class="form-group col-sm-4"></div>
+                  <div class="form-group col-sm-4">
+                     <button type="button" id="btnEnviar" class="btn btn-outline-primary btn-block" onclick="enviarInformacion()" disabled>Enviar</button>           
+                  </div>
+               </div>
+            </form>
+         </div>          
+         </div>
+
+         <div class="row"> <br></div>
+
+         </div>
+         
+    </body>
+
+   
+   </html>
+   <script type="text/javascript" src="js/js.js"></script> 
