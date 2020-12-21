@@ -138,7 +138,7 @@ function soloNumeros(e) {
 function direccion(e) {
 	key = e.keyCode || e.which;
 	teclado = String.fromCharCode(key).toLowerCase();
-	letras = "qwertyuiopasdfghjklñzxcvbnmáéíóú0123456789";
+	letras = "qwertyuiopasdfghjklñzxcvbnmáéíóú0123456789 ";
 	especiales = "8-37-38-46-164";
 	teclado_especial = false;
 	for (var i in especiales) {
